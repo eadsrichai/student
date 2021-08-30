@@ -1,5 +1,9 @@
 <?php 
-        session_start();
+          
+        session_start(); 
+        if($_SESSION['u'] != null){
+            require('sessionexp.php');
+    
         include_once('dbconnect.php');
         $id_dep = $_GET['id_dep'];
         $name_dep = $_GET['name_dep'];
@@ -16,3 +20,6 @@
         $stmt->close();
         header( 'Location: showdep.php' ) ;
 ?>
+<?php } else {
+header( 'Location: showstudent.php');
+} ?>

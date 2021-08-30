@@ -1,13 +1,13 @@
 <?php  
     // กำหนดค่าตัวแปร สำหรับการเชื่อมต่อ
     $servername = "localhost";  //เครื่องคอมพิวเตอร์ Server
-    // $username = "wut";         // username สำหรับเข้าถึงฐานข้อมูล
-    // $password = "eYnBAvy[slfo]yLx";             // รหัสผ่านสำหรับการเข้าถึงฐานข้อมูล
-    // $database = "wut_regis";        // ชื่อฐานข้อมูลที่ใช้
+    $username = "wut";         // username สำหรับเข้าถึงฐานข้อมูล
+    $password = "eYnBAvy[slfo]yLx";             // รหัสผ่านสำหรับการเข้าถึงฐานข้อมูล
+    $database = "wut_regis";        // ชื่อฐานข้อมูลที่ใช้
 
-    $username = "root";
-    $password = "";
-    $database = "wut_regis";
+    // $username = "root";
+    // $password = "";
+    // $database = "wut_regis";
     // สร้างการเชื่อมต่อ
     $conn  = new mysqli($servername,$username,$password,$database);
     mysqli_set_charset($conn, "utf8");

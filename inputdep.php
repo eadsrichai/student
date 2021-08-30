@@ -1,4 +1,8 @@
-<?php   session_start(); ?>
+<?php   
+    session_start(); 
+    if($_SESSION['u'] != null){
+        require('sessionexp.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,3 +36,6 @@
 </div>
 </body>
 </html>
+<?php } else {
+header( 'Location: showstudent.php');
+} ?>

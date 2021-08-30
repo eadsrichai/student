@@ -1,5 +1,9 @@
 <?php 
-    session_start();
+    <?php   
+    session_start(); 
+    if($_SESSION['u'] != null){
+        require('sessionexp.php');
+        
     $u = $_GET['username'];
     $p = $_GET['password'];
 
