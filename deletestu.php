@@ -1,6 +1,7 @@
 <?php
         session_start();
         if($_SESSION['u'] != null){
+                require('sessionexp.php');
         include_once('dbconnect.php');
         $id_stu = $_GET['id_stu'];
        
