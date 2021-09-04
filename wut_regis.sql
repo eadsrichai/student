@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 29, 2021 at 04:26 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.3.28
+-- Host: localhost
+-- Generation Time: Sep 04, 2021 at 07:06 AM
+-- Server version: 10.3.28-MariaDB
+-- PHP Version: 7.4.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,8 +39,10 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `id_stu`, `username`, `password`) VALUES
-(1, '1001', 'test', 'asdf'),
-(2, '1002', 'test2', 'asdf');
+(6, '1001', 'test', '1234'),
+(10, '5011', 'saichon', '7983'),
+(11, '5007', 'test007', 'aof123'),
+(12, '5013', 'tang', '123456');
 
 -- --------------------------------------------------------
 
@@ -75,16 +77,20 @@ CREATE TABLE `student` (
   `tel_stu` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_stu` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gpa_stu` float NOT NULL,
-  `id_dep` varchar(4) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_acc` int(11) NOT NULL
+  `id_dep` varchar(4) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`id_stu`, `pre_stu`, `fname_stu`, `lname_stu`, `tel_stu`, `email_stu`, `gpa_stu`, `id_dep`, `id_acc`) VALUES
-('1001', 'นาย', 'สุนิสา', 'พุมบุตร', '1234567', 'xxx@gmail.com', 2, '01', 1);
+INSERT INTO `student` (`id_stu`, `pre_stu`, `fname_stu`, `lname_stu`, `tel_stu`, `email_stu`, `gpa_stu`, `id_dep`) VALUES
+('1001', 'นาย', 'วุฒิวงศ์', 'เอียดศรีชาย', '1234567', 'xxx@gmail.com', 2, '01'),
+('5007', 'นาย', 'ศิวเชษฐ์ ', 'พุมบุตร', '0968942059', 'siwachet2059@gmail.com', 3, '01'),
+('5011', 'นางสาว', 'สายชล', 'ฉิมบ้านไร่', '0645588588', 'saichon21@gmail.com', 3, '01'),
+('5013', 'นางสาว', 'สุวะนันท์', 'มงคล', '0935439909', 'tangsuwanun@gmail.com', 3, '01'),
+('6216013085008', 'นางสาว', 'สุนิสา', 'ชูช่วย', '0612571615', 'sunisachuchwy986@gmail.com', 3, '01'),
+('6216013805009', 'นาย', 'อุดมศักดิ์', 'ทับไทย', '0842817104', 'udomsak046289@gmail.com', 3, '01');
 
 --
 -- Indexes for dumped tables
@@ -116,7 +122,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
